@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 juin 2019, 13:46:51
+    Author     : eugene
+*/
+
+#contact h1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    margin-top: 10px;
+}
+
+#contact form fieldset {
+    padding: 10px;
+}
+
+#coordo legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+#coordo label {
+    margin-right: 10px;
+}
+
+#coordo input, #coordo select {
+    flex: 1;
+}
+
+#coordo div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#coordo input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#coordo #marques label {
+    text-transform: capitalize;
+}
+
+#coordo fieldset {
+    width: fit-content;
+    margin: auto;
+}
+
+#planetes {
+    align-self: flex-start;
+}
+
+#planetes legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+#planetes div {
+    margin: 10px;
+}
+
+#planetes label {
+    margin-left: 10px;
+}
+
+#controles {
+    margin-top: 10px;
+}
+
+#controles input {
+    padding: 10px;
+}
+
+#controles input:first-child {
+    margin-right: 10px;
+}
+
+input:valid, :not(input[type="submit"]) {
+    color: green;
+}
+input:invalid {
+    color: red;
+}
+
+#coordo div.input-validation {
+    margin: 0;
+}
+
+input[type="text"]:valid ~ .input-validation::before,
+input[type="email"]:valid ~ .input-validation::before {
+    content: "✔";
+    margin-left: 5px;
+    color: green;
+}
+
