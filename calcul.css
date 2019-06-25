@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 juin 2019, 09:12:15
+    Author     : Maxime
+*/
+#planete{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+#planete article{
+    margin:10px;
+    position: relative;
+}
+
+ .Mercure, .Venus, .Terre, .Uranus, .Neptune, .Pluton, .Mars, .Jupiter, .Saturne{
+    -webkit-transition:-webkit-transform .9s;
+    transition:transform .9s; 
+}
+.Mercure:hover, .Venus:hover, .Terre:hover, .Uranus:hover, .Neptune:hover, .Pluton:hover, .Mars:hover, .Jupiter:hover, .Saturne:hover{
+    -webkit-transform: rotateY(180deg); /* Safari prior 9.0 */
+transform: rotateY(180deg); /* Standard syntax */
+}
+
+
+.Mercure, .Venus, .Terre, .Neptune, .Saturne, .Jupiter, .Mars, .Uranus, .Pluton{
+    border: #bbb thin solid;
+}

@@ -1,8 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  * Fonction principale qui s'occupe de récupérer les valeurs, et qui s'occupe ensuite de l'afficher
@@ -11,8 +6,34 @@
  */
 function calcPoids() {
     let masse = recupValeur("#i_masse");
-    let poids = recupMasseTerre(masse);
-    affichePoids(poids); 
+    
+    let poidsTerre = recupMasseTerre(masse);
+    affichePoids(poidsTerre,"#poidsTerre");
+    
+    let poidsMercure = recupMasseMercure(masse);
+    affichePoids(poidsMercure,"#poidsMercure");
+  
+    let poidsVenus= recupMasseVenus(masse);
+    affichePoids(poidsMercure,"#poidsVenus");
+    
+    let poidsMars = recupMasseMars(masse);
+    affichePoids(poidsMars,"#poidsMars");
+    
+    let poidsJupiter = recupMasseJupiter(masse);
+    affichePoids(poidsMercure,"#poidsJupiter");
+    
+    
+    let poidsSaturne= recupMasseSaturne(masse);
+    affichePoids(poidsMercure,"#poidsSaturne");
+    
+    let poidsUranus = recupMasseUranus(masse);
+    affichePoids(poidsMercure,"#poidsUranus");
+    
+    let poidsNeptune = recupMasseNeptune(masse);
+    affichePoids(poidsMercure,"#poidsNeptune");
+    
+    let poidsPluton= recupMassePluton(masse);
+    affichePoids(poidsMercure,"#poidsPluton");
 }
 window.addEventListener("load", function () {
     // Déclaration de l'index de parcours
@@ -46,20 +67,23 @@ function recupValeur(id) {
     }
 }
 
+
+
 /**
  * Fonction qui affiche la rémunération dans l'élément d'id "remuneration"
  * 
  * @param {type} nombre
  * @return {undefined}
  */
-function affichePoids(nombre) {
-    window.document.querySelector("#poids").innerHTML =
-            "votre poids est : " + nombre + " N ";
+function affichePoids(nombre, text) {
+    window.document.querySelector(text).innerHTML =
+            "     votre poids est : " + nombre + " N ";
+    
 }
 
 /**
 *Fonction qui calcul le poids sur la terre
-*/ 
+*/ 
 
 function recupMasseTerre(masse) {
    const gTerre = 9.807;
@@ -126,3 +150,4 @@ function recupVenusUranus(masse){
     const gUranus= 8.87;
     return(masse*gUranus);
 }
+
