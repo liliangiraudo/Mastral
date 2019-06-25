@@ -16,9 +16,11 @@ and open the template in the editor.
 #contact form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     padding-bottom: 50px;
     margin-top: 10px;
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
 }
 
 #contact form fieldset {
@@ -76,6 +78,9 @@ and open the template in the editor.
 
 #controles {
     margin-top: 10px;
+    display: flex; /* Ce conteneur est "flexible" */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
 }
 
 #controles input {
