@@ -125,6 +125,19 @@ nav ul li:hover {
  padding-top: 16px; /* Marge intérieure supérieure */
 }
 
+#classification{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+#classification article{
+    margin:10px;
+    position: relative;
+}
+
 /* fin */
 
 footer {
