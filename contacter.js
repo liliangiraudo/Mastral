@@ -6,6 +6,7 @@
 
 
 function validEnvoi() {
+ var pattern = /^[a-z0-9.-]{2,}@+[a-z0-9.-]{2,}$/i;
   if (window.document.querySelector("#nom").value === "" && 
     window.document.querySelector("#prenom").value === "" )
     {
@@ -14,15 +15,14 @@ function validEnvoi() {
   else if (window.document.querySelector("#email").value === ""){
         alert("l'email doit être rempli"); // On affiche un message
     }
-
+  else if (window.document.querySelector("#email").value !== pattern){
+        alert("email invalide.");
+  }
   else{
-    let question = "Souhaitez-vous réellement utiliser l'adresse suivante : " 
-    + window.document.querySelector("#email").value;
-    if (confirm(question)){
      window.document.querySelector("#form_contact").submit(); //OK envoyer 
   }
-  }
 }
+
 
 window.addEventListener("load", function() {
   window.document.querySelector("#btn_envoyer").addEventListener("click", validEnvoi);
