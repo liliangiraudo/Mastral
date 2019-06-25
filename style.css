@@ -79,11 +79,18 @@ nav ul li:hover {
 
 #principal article p {
  padding-top: 16px; /* Marge intérieure supérieure */
+ margin-left: 100px;
 }
 
 #titre1, #titre2{
     font-size: xx-large;
-    color: black;
+    color: #1E3CB7;
+    padding-top: 16px; /* Marge intérieure supérieure */
+    margin-left: 100px;
+}
+
+#titre3 {
+    margin-bottom: 50px; 
 }
 
 #principal article img {  /* post-it jaune */
