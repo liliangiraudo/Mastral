@@ -7,33 +7,35 @@
 function calcPoids() {
     let masse = recupValeur("#i_masse");
     
-    let poidsTerre = recupMasseTerre(masse);
-    affichePoids(poidsTerre,"#poidsTerre");
+   
     
     let poidsMercure = recupMasseMercure(masse);
-    affichePoids(poidsMercure,"#poidsMercure");
+    affichePoids(poidsMercure,".poidsMercure");
+    
+     let poidsTerre = recupMasseTerre(masse);
+    affichePoids(poidsTerre,".poidsTerre");
   
-    let poidsVenus= recupMasseVenus(masse);
-    affichePoids(poidsMercure,"#poidsVenus");
+    let poidsVenus= recupMasseVenusUranus(masse);
+    affichePoids(poidsMercure,".poidsVenus");
     
     let poidsMars = recupMasseMars(masse);
-    affichePoids(poidsMars,"#poidsMars");
+    affichePoids(poidsMars,".poidsMars");
     
     let poidsJupiter = recupMasseJupiter(masse);
-    affichePoids(poidsMercure,"#poidsJupiter");
+    affichePoids(poidsMercure,".poidsJupiter");
     
     
     let poidsSaturne= recupMasseSaturne(masse);
-    affichePoids(poidsMercure,"#poidsSaturne");
+    affichePoids(poidsMercure,".poidsSaturne");
     
-    let poidsUranus = recupMasseUranus(masse);
-    affichePoids(poidsMercure,"#poidsUranus");
+    let poidsUranus = recupMasseVenusUranus(masse);
+    affichePoids(poidsMercure,".poidsUranus");
     
     let poidsNeptune = recupMasseNeptune(masse);
-    affichePoids(poidsMercure,"#poidsNeptune");
+    affichePoids(poidsMercure,".poidsNeptune");
     
     let poidsPluton= recupMassePluton(masse);
-    affichePoids(poidsMercure,"#poidsPluton");
+    affichePoids(poidsMercure,".poidsPluton");
 }
 window.addEventListener("load", function () {
     // Déclaration de l'index de parcours
@@ -115,7 +117,7 @@ function recupMasseSaturne(masse) {
  * @param {float} masse
  * @returns {float}
  */
-function recupMercure(masse) {
+function recupMasseMercure(masse) {
     const gMercure= 3.7;
     return(masse*gMercure);
 }
@@ -126,7 +128,7 @@ function recupMercure(masse) {
  * @returns {float}
  */
 
-function recupJupiter(masse){
+function recupMasseJupiter(masse){
     const gJupiter= 24.79;
     return(masse*gJupiter);
 }
@@ -136,7 +138,7 @@ function recupJupiter(masse){
  * @param {float} masse
  * @returns {float}
  */
-function recupNeptune(masse){
+function recupMasseNeptune(masse){
     const gNeptune= 11.15;
     return(masse*gNeptune);
 }
@@ -146,8 +148,13 @@ function recupNeptune(masse){
  * @param {float} masse
  * @returns {float}
  */
-function recupVenusUranus(masse){
+function recupMasseVenusUranus(masse){
     const gUranus= 8.87;
     return(masse*gUranus);
+}
+
+function recupMassePluton(masse){
+    const gPluton=0.66;
+    return(masse*gPluton);
 }
 
