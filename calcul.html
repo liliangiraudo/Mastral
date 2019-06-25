@@ -16,9 +16,17 @@
     <body>
         <header>
 
-            <img src="baniere1.png" alt=""/>
-
-            <nav> <!--  barre de menu  -->
+            <img src="baniere1.png" alt=""/>            
+            <picture>
+                <source media="(max-width:980px)" srcset="banniere1_small.png">
+                <source srcset="banniere1.png">                 
+            </picture>
+            <nav> <!--  menu hamburger  -->
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                 <!--  barre de menu  -->
                 <ul>
                     <li>
                         <a href="index.html">Accueil</a>
